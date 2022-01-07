@@ -1,0 +1,21 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),CloudFront Distribution for static content,Amazon CloudFront,0,0,0.00,USD,"Data transfer out to internet (0 GB per month), Data transfer out to origin (0 GB per month), Number of requests (HTTPS) (0 per month)"
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),S3 bucket for static content,S3 Standard,0,4.05,48.60,USD,S3 Standard storage (0.01 GB per month)
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),S3 bucket for static content,Data Transfer,0,0,0.00,USD,"DT Inbound: Internet (0 TB per month), DT Outbound: Amazon CloudFront (0 TB per month)"
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),Elastic IP for Single NAT Gateway,Amazon Elastic IP,0,0,0.00,USD,"Number of EC2 instances (1), Number of EIPs per instance (1), Number of EIP remaps (0)"
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),ALB and NLB for web servers and application servers,Application Load Balancer,0,1768.43,21221.16,USD,Number of Application Load Balancers (1)
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),ALB and NLB for web servers and application servers,Network Load Balancer,0,1330.43,15965.16,USD,"Number of Network Load Balancers (1), Processed bytes per NLB for TCP (300 GB per hour), Average number of new TCP connections (5000 per second), Average TCP connection duration (1 seconds), Processed bytes per NLB for UDP (0 GB per hour), Average number of new UDP Flows (0 per second), Average UDP Flow duration (0 seconds), Processed bytes per NLB for TLS (0 GB per hour), Average number of new TLS connections (0 per second), Average TLS connection duration (0 seconds)"
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),Single NAT Gateway,Amazon Virtual Private Cloud (VPC),0,77.85,934.20,USD,Number of NAT Gateways (1)
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),Web server instances,Amazon EC2,0,132.32,1587.84,USD,"Operating system (Linux), Quantity (6), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage amount (30 GB), Instance type (t3.medium)"
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),Application server instances,Amazon EC2,0,132.32,1587.84,USD,"Operating system (Linux), Quantity (6), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage amount (30 GB), Instance type (t3.medium)"
+ND063 Project 2 Reduced Cost Estimate,US East (N. Virginia),Database with one replica in other region,Amazon RDS for PostgreSQL,0,2913.15,34957.80,USD,"Storage volume (General Purpose SSD (gp2)), Storage amount (9000 GB per month), Nodes (1), Instance Type (db.r5.2xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment Option (Multi-AZ), Pricing Model (Reserved), Lease Offering Term (1yr), Purchase Option (No Upfront), Additional backup storage (0 GB)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
+
+Rationale
+"* Reduced the number of EC2 instances for application and web servers. We are buying performance with the load balancers and fault tolerance is achieved for free in our autoscaling groups."
+"* Pricing model of the RDS database was changed from on-demand to 1 year reserved with no upfront payment."
+"* Removed backup storage because there's no aditional charge for backup storage of up to 100% of our total database storage."

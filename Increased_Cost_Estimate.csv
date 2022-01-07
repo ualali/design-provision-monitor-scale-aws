@@ -1,0 +1,32 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),CloudFront Distribution for static content,Amazon CloudFront,0,0,0.00,USD,"Data transfer out to internet (0 GB per month), Data transfer out to origin (0 GB per month), Number of requests (HTTPS) (0 per month)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),S3 bucket for static content,S3 Standard,0,4.05,48.60,USD,S3 Standard storage (0.01 GB per month)
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),S3 bucket for static content,Data Transfer,0,0,0.00,USD,"DT Inbound: Internet (0 TB per month), DT Outbound: Amazon CloudFront (0 TB per month)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),Elastic IP for Single NAT Gateway,Amazon Elastic IP,0,11.45,137.40,USD,"Number of EC2 instances (3), Number of EIPs per instance (1), Number of EIP remaps (5)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),ALB and NLB for web servers and application servers,Application Load Balancer,0,1768.43,21221.16,USD,Number of Application Load Balancers (1)
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),ALB and NLB for web servers and application servers,Network Load Balancer,0,1330.43,15965.16,USD,"Number of Network Load Balancers (1), Processed bytes per NLB for TCP (300 GB per hour), Average number of new TCP connections (5000 per second), Average TCP connection duration (1 seconds), Processed bytes per NLB for UDP (0 GB per hour), Average number of new UDP Flows (0 per second), Average UDP Flow duration (0 seconds), Processed bytes per NLB for TLS (0 GB per hour), Average number of new TLS connections (0 per second), Average TLS connection duration (0 seconds)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),NAT Gateway,Amazon Virtual Private Cloud (VPC),0,965.7,11588.40,USD,Number of NAT Gateways (2)
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),Web server instances,Amazon EC2,0,529.27,6351.24,USD,"Operating system (Linux), Quantity (24), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage amount (30 GB), Instance type (t3.medium)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),Application server instances,Amazon EC2,0,529.27,6351.24,USD,"Operating system (Linux), Quantity (24), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage amount (30 GB), Instance type (t3.medium)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),Database with one replica in other region,Amazon RDS for PostgreSQL,0,7686.3,92235.60,USD,"Storage volume (Provisioned IOPS SSD (io1)), Provisioning IOPS (5000), Storage amount (20000 GB per month), Nodes (1), Instance Type (db.r5.4xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment Option (Multi-AZ), Pricing Model (Reserved), Lease Offering Term (1yr), Purchase Option (No Upfront), Additional backup storage (0 GB)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),Bastion server,Amazon EC2,0,33.370000000000005,400.44,USD,"Operating system (Linux), Quantity (1), Pricing strategy (On-Demand Instances), Storage amount (30 GB), Instance type (t3.medium)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),WAF for application protection,AWS Web Application Firewall (WAF),0,687,8244.00,USD,"Number of Web Access Control Lists (Web ACLs) utilized (5 per month), Number of Rules added per Web ACL (10 per month), Number of Rule Groups per Web ACL (10 per month), Number of Rules inside each Rule Group (10 per month), Number of Managed Rule Groups per Web ACL (10 per month)"
+ND063 Project 2 Increased Cost Estimate,US East (N. Virginia),ElastiCache to improve data layer performance,Amazon ElastiCache,0,3784.32,45411.84,USD,Nodes ( 1 instances of type Redis  Memory optimized  cache r5.12xlarge  OnDemand )
+Global,All,Business support plan,AWS Support,0,1512.27 ,18147.24,USD,"Supports 24/7 phone, chat, and email access to Cloud Support Engineers for unlimited contacts, with and a response time of less than 1 hour."
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
+
+Rationale
+"* Added WAF to increase security."
+"* Added NAT gateway for High Availability"
+"* Added Business Support Plan"
+"* Increased storage in RDS instance, and changed to a more capable instance type to increase performance"
+"* Added ElastiCache for fast responses"
+"* Added a Bastion server for servers management"
+"* Added EIPs for NAT Gateways and Bastion server"
+
+Cost Estimate Link
+"* https://calculator.aws/#/estimate?id=cd8ea9a7ff81ce64c271a81395213046a69e9fbe"
